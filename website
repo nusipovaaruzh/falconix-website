@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Falconix</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+		* { margin: 0; padding: 0; box-sizing: border-box; }
+		html { scroll-behavior: smooth; }
+		body {
+			font-family: 'Montserrat', sans-serif;
+			background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+			color: white;
+			text-align: center;
+		}
+
+		header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 15px 20px;
+			background: rgba(0, 0, 0, 0.8);
+			backdrop-filter: blur(10px);
+			position: fixed;
+			width: 100%;
+			top: 0;
+			z-index: 1000;
+		}
+
+		.logo { font-size: 22px; font-weight: 700; }
+
+		.menu { position: relative; }
+
+		.menu-btn {
+			font-size: 24px;
+			cursor: pointer;
+			padding: 10px;
+			background: rgba(255, 255, 255, 0.1);
+			border-radius: 5px;
+			transition: 0.3s;
+		}
+
+		.menu-btn:hover { background: rgba(255, 255, 255, 0.2); }
+
+		.menu-list {
+			display: none;
+			position: absolute;
+			right: 0;
+			top: 40px;
+			background: rgba(0, 0, 0, 0.95);
+			padding: 15px;
+			border-radius: 5px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+			width: 220px;
+		}
+
+		.menu-list a {
+			display: block;
+			padding: 12px;
+			color: white;
+			text-decoration: none;
+			font-weight: 600;
+			transition: 0.3s;
+		}
+
+		.menu-list a:hover {
+			background: #ff6600;
+			border-radius: 5px;
+		}
+
+		.hero {
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+			background: url('https://source.unsplash.com/1600x900/?technology') center/cover no-repeat;
+		}
+
+		section {
+			padding: 60px 20px;
+			text-align: center;
+			opacity: 0;
+			transform: translateY(20px);
+			transition: opacity 1s ease-out, transform 1s ease-out;
+		}
+
+		.show { opacity: 1; transform: translateY(0); }
+
+		.cars {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 20px;
+		}
+
+		.car {
+			background: rgba(255, 255, 255, 0.1);
+			padding: 15px;
+			border-radius: 8px;
+			width: 220px;
+			text-align: center;
+		}
+
+		.car img {
+			width: 100%;
+			border-radius: 8px;
+		}
+
+		.qr-section {
+			margin-top: 50px;
+			padding: 40px;
+			background: rgba(255, 255, 255, 0.1);
+			border-radius: 10px;
+		}
+
+		.qr-section img {
+			width: 180px;
+			height: 180px;
+			border-radius: 10px;
+		}
+
+		h1 {
+			font-size: 28px;
+			font-weight: 700;
+			text-transform: uppercase;
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-size: 18px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="logo">FALCONIX</div>
+		<div class="menu">
+			<div class="menu-btn" onclick="toggleMenu()">&#9776; Menu</div>
+			<div class="menu-list">
+				<a href="#news">News</a>
+				<a href="#contacts">Contacts</a>
+				<a href="#info">Info</a>
+				<a href="#cars">Prices & Cars</a>
+				<a href="#creators">Creators</a>
+			</div>
+		</div>
+	</header>
+
+	<section class="hero">
+		<h1>THE FUTURE BEGINS HERE</h1>
+		<p>Falconix — innovative technologies and the power of advanced solutions.</p>
+	</section>
+
+	<section id="news">
+		<h1>News</h1>
+		<p>🚗 Falconix has announced the release of its new electric car model.</p>
+		<p>⚡ Our charging stations are now available in 50+ cities worldwide.</p>
+	</section>
+
+	<section id="contacts">
+		<h1>Contacts</h1>
+		<p>📍 Address: Almaty, Abay St. 100</p>
+		<p>📞 Phone: +7 777 123 4567</p>
+		<p>✉️ Email: info@falconix.com</p>
+	</section>
+
+	<section id="info">
+		<h1>Info</h1>
+		<p>Falconix is a company specializing in cutting-edge technologies in the automotive industry.</p>
+	</section>
+
+	<section id="cars">
+		<h1>Prices & Cars</h1>
+		<div class="cars">
+			<div class="car">
+				<img src="https://i.postimg.cc/ZR9BygzM/6ea268fc-3488-464c-8685-a1bc93376ada.jpg" alt="Falconix Model S">
+				<p>Falconix Model S — $50,000</p>
+			</div>
+			<div class="car">
+				<img src="https://i.postimg.cc/LsJ6y1Qq/1c7dfe80-9f5c-41b8-9335-df8d6ef31c81.jpg" alt="Falconix Model X">
+				<p>Falconix Model X — $70,000</p>
+			</div>
+			<div class="car">
+				<img src="https://i.postimg.cc/ZR3YmhS4/738b05fa-7000-43d8-b487-956c9b38f123.jpg" alt="Falconix Future">
+				<p>Falconix Future — $90,000</p>
+			</div>
+			<div class="car">
+				<img src="https://i.postimg.cc/Sxsys9hZ/a762892b-8075-4b18-bf8a-84f72b21f5e7.jpg" alt="Falconix E-Drive">
+				<p>Falconix E-Drive — $60,000</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="qr-section">
+		<h1>Scan to visit our website</h1>
+		<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://your-website.com" alt="QR Code">
+		<p>Scan the QR code to visit our official website!</p>
+	</section>
+
+	<script>
+		function toggleMenu() {
+			let menu = document.querySelector(".menu-list");
+			menu.style.display = (menu.style.display === "block") ? "none" : "block";
+		}
+
+		document.addEventListener('click', function(event) {
+			let menu = document.querySelector(".menu-list");
+			if (!event.target.closest('.menu')) menu.style.display = "none";
+		});
+
+		function revealSections() {
+			let sections = document.querySelectorAll("section");
+			let windowHeight = window.innerHeight;
+			sections.forEach(section => {
+				let sectionTop = section.getBoundingClientRect().top;
+				if (sectionTop < windowHeight - 100) {
+					section.classList.add("show");
+				}
+			});
+		}
+
+		window.addEventListener("scroll", revealSections);
+		revealSections();
+	</script>
+</body>
+</html>
